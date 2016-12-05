@@ -1,0 +1,316 @@
+body {
+  position: relative;
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: 'Open Sans', sans-serif;
+  min-width: 100vw;
+  min-height: 100vh;
+  padding-bottom: 3em;
+}
+
+/* Header */
+header {
+  z-index: 9;
+  top: 0;
+  position: fixed;
+  background: rgba(255, 255, 255, 1);
+  width: 100%;
+  box-shadow: 0 1em 1em rgba(0,0,0,0.5);
+}
+
+h1 {
+  font-family: 'Anton';
+  font-size: 5em;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+
+h2 {
+  font-family: 'Anton';
+  font-size: 3em;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 0.6em;
+  margin-bottom: 1em;
+}
+
+p {
+  margin-bottom: 1.5em;
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin: 0 auto;
+}
+
+
+/* Logo */
+.logo {
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Big Text */
+.big-text {
+  font-family: 'Anton';
+  text-transform: uppercase;
+  font-size: 3.6em;
+  color: black;
+}
+
+/* Menu */
+.menu {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0.86em;
+  margin-left: 2em;
+}
+
+  .menu li {
+    display: inline-block;
+    margin-right: 0.5em;
+  }
+
+  .menu a {
+    color: #ABABAB;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    padding: 2.1em 1.5em;
+  }
+
+  .menu a:hover,
+  .menu .active {
+    color: #000000;
+  }
+
+/* Cover */
+.cover {
+  display: flex;
+  width: 100%;
+  height: 30em;
+  background-image: url('../images/1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+  
+  .cover .container {
+    color: white;
+    display: block;
+    margin: auto;
+  }
+
+  .cover blockquote {
+    font-size: 2em;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+    text-shadow: 0 0 3px #000;
+  }
+
+/* Page */
+.page {
+  padding-top: 5em;
+}
+
+/* Article image */
+.article-image {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+/* Collage */
+.collage {
+  position: relative;
+  height: 30em;
+  margin-bottom: 5em;
+}
+  .collage img {
+    width: 100%;
+    display: block;
+  }
+
+  .collage li {
+    position: absolute;
+    box-shadow: 0 0 1em;
+    cursor: pointer;
+  }
+
+  .collage li:hover {
+    z-index: 2;
+  }
+
+  .collage-1 {
+    width: 52%;
+    left: 27%;
+    transform: rotate(-5deg);
+  }
+
+  .collage-2 {
+    width: 57%;
+    right: 0;
+    transform: rotate(-20deg);
+  }
+
+  .collage-3 {
+    width: 59%;
+    bottom: 0;
+    transform: rotate(-15deg);
+  }
+
+  .collage-4 {
+    width: 53%;
+    bottom: 50%;
+    transform: rotate(12deg);
+  }
+
+  .collage-5 {
+    width: 57%;
+    bottom: 0;
+    right: 0;
+    transform: rotate(4deg);
+  }
+
+/* Disapp text */
+.disapp-text {
+  margin-left: -1%;
+}
+  .disapp-text .item {
+    position: relative;
+    width: 49%;
+    height: 14em;
+    margin-bottom: 0.5em;
+    display: inline-block;
+    margin-left: 1%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    overflow: hidden;
+  }
+
+  .disapp-text .text,
+  .disapp-text .dis-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  .disapp-text .text {
+    transition: opacity 0.3s;
+  }
+
+  .disapp-text h3 {
+    margin: auto;
+    font-size: 2em;
+    text-shadow: 0 0 3px #000;
+  }
+
+  .disapp-text .dis-text {
+    background: rgba(0,0,0,0.4);
+    font-size: 1.3em;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .disapp-text .dis-text ul {
+    margin: auto;
+    list-style: disc;
+  }
+
+  .disapp-text .item:hover .text {
+    opacity: 0;
+  }
+
+  .disapp-text .item:hover .dis-text {
+    opacity: 1;
+  }
+
+
+.article-image img {
+  box-shadow: 13px 13px 18px rgba(0,0,0,0.5);
+  transition: all infinity;
+  filter: grayscale(1);
+}
+
+.article-image img:hover {
+  filter: grayscale(0);
+}
+
+.article-image img {
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    filter: grayscale(1);
+  }
+
+  to {
+    filter: grayscale(0);
+  }
+}
+
+.wrapper-scale {
+  padding: 4em;
+  margin: 0 -4em;
+  overflow: hidden;
+}
+  .scale {
+    position: relative;
+    width: 100%;
+    height: 20em;
+  }
+
+  .scale-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/3.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: transform 10s;
+    display: flex;
+  }
+
+  .scale-cover:hover {
+    transform: scale(5);
+  }
+
+.scale-cover a {
+  color: white;
+  position: absolute;
+  top: 26%;
+  left: 60%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
